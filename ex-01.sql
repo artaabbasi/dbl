@@ -13,6 +13,6 @@ JOIN SalesLT.SalesOrderDetail AS sod ON so.SalesOrderID = sod.SalesOrderID
 GROUP BY so.SalesOrderID, so.OrderDate;
 
 SELECT TOP 10 c.CustomerID, MAX(so.SubTotal)
-WHERE SalesLT.SalesOrderHeader AS so
+FROM SalesLT.SalesOrderHeader AS so
 JOIN Customer AS c ON so.CustomerID = c.Customer 
 GROUP BY c.CustomerID;
